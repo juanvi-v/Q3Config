@@ -1,0 +1,45 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Q3Config\n"
+"POT-Creation-Date: 2013-07-01 19:21+0200\n"
+"PO-Revision-Date: 2013-07-01 19:26+0100\n"
+"Last-Translator: Juan Vicente Vercher <juanvi@artvisual.net>\n"
+"Language-Team: Juanvi <juanvi@artvisual.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n== 1 ? 0 : 1;\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Spanish\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: Controller/ConfigsController.php:45
+msgid "Items saved"
+msgstr "Items saved"
+
+#: Controller/ConfigsController.php:49
+msgid "ERROR: no item has been saved"
+msgstr "ERROR: no item has been saved"
+
+#: View/Configs/admin_index.ctp:2
+msgid "Configuration"
+msgstr "Configuration"
+
+#: View/Configs/admin_index.ctp:5
+msgid "No elements"
+msgstr "No elements"
+
+#: View/Configs/admin_index.ctp:34
+msgid "Yes"
+msgstr "Yes"
+
+#: View/Configs/admin_index.ctp:34
+msgid "No"
+msgstr "No"
+
+#: View/Configs/admin_index.ctp:53
+msgid "Save"
+msgstr "Save"
