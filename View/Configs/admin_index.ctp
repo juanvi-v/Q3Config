@@ -9,7 +9,7 @@ foreach($groups as $group):
 $group_id=$group['ConfigGroup']['id'];
 echo $this->Form->create('Config',array('action'=>'admin_save_options','id'=>'Config'.$group_id.'AdminSaveForm'));
 ?>
-<fieldset class="configuracion">
+<fieldset class="configuration">
 <legend><?php echo $group['ConfigGroup']['name'];?></legend>
 <ul>
 <?php
@@ -18,38 +18,38 @@ foreach($group['Config'] as $config):?>
 	<li>
 <?php
 	echo $this->Form->hidden('Config.'.$i.'.id',array('value'=>$config['id'],'id'=>'Config_'.$group_id.'_'.$i.'_id'));
-		$atributos=str_split(strrev(sprintf('%8b',$config['editable'])));
+		$atributes=str_split(strrev(sprintf('%8b',$config['editable'])));
 		$options=array();
-		if($atributos[1]!=1){
-			$options['class']='campo_corto';
+		if($atributes[1]!=1){
+			$options['class']='short_field';
 		}
-		if($atributos[2]==1){
+		if($atributes[2]==1){
 			$options['type']='password';
 		}
-		if($atributos[3]==1){
-			$valores=explode(';',$config['opciones']);
-			$options['options']=array_combine($valores,$valores);
+		if($atributes[3]==1){
+			$values=explode(';',$config['options']);
+			$options['options']=array_combine($values,$values);
 		}
-		if($atributos[4]==1){
+		if($atributes[4]==1){
 			$options['options']=array(1=>__d('q3_config','Yes'),0=>__d('q3_config','No'));
 		}
 
 	echo $this->Form->input('Config.'.$i.'.value',array('label'=>$config['description'],'value'=>$config['value'],'id'=>'Config_'.$group_id.'_'.$i.'_value')+$options);
 	$i++;
 
-	if(!empty($config['sufijo'])):
-		$clase_sufijo='sufijo';
-		if($atributos[1]!=1){
-			$clase_sufijo.=' sufijo_corto';
+	if(!empty($config['suffix'])):
+		$suffix_class='suffix';
+		if($atributes[1]!=1){
+			$suffix_class.=' short_suffix';
 		}
 	?>
-	<div class="<?php echo $clase_sufijo;?>"><?php echo $config['sufijo'];?></div>
+	<div class="<?php echo $suffix_class;?>"><?php echo $config['suffix'];?></div>
 	<?php endif;?>
 </li>
 <?php endforeach;?>
 
 </ul>
-<div class="botones">
+<div class="buttons">
 <?php echo $this->Form->button(__d('q3_config','Save'), array('type'=>'submit')); ?>
 </div>
 </fieldset>
