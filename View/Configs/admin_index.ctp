@@ -17,6 +17,10 @@ $i=0;
 foreach($group['Config'] as $config):?>
 	<li>
 <?php
+	if(Configure::read('debug')>0){
+		echo '<!-- '.$config['config_key'].' -->';
+	}
+
 	echo $this->Form->hidden('Config.'.$i.'.id',array('value'=>$config['id'],'id'=>'Config_'.$group_id.'_'.$i.'_id'));
 		$atributes=str_split(strrev(sprintf('%8b',$config['editable'])));
 		$options=array();
