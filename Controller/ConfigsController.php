@@ -25,6 +25,10 @@ class ConfigsController extends Q3ConfigAppController {
 
     var $uses = array('Q3Config.Config','Q3Config.ConfigGroup');
 
+    protected $admin_level=100;
+
+
+
     /** @method admin_index
      *  renders config options
      */
