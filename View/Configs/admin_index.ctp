@@ -24,18 +24,21 @@ foreach($group['Config'] as $config):?>
 	echo $this->Form->hidden('Config.'.$i.'.id',array('value'=>$config['id'],'id'=>'Config_'.$group_id.'_'.$i.'_id'));
 		$atributes=str_split(strrev(sprintf('%8b',$config['editable'])));
 		$options=array();
-		if($atributes[1]!=1){
+		if($atributes[1]!=1){ //whort field
 			$options['class']='short_field';
 		}
-		if($atributes[2]==1){
+		if($atributes[2]==1){ //password
 			$options['type']='password';
 		}
-		if($atributes[3]==1){
+		if($atributes[3]==1){ //array list
 			$values=explode(';',$config['options']);
 			$options['options']=array_combine($values,$values);
 		}
-		if($atributes[4]==1){
+		if($atributes[4]==1){ //yes/no
 			$options['options']=array(1=>__d('q3_config','Yes'),0=>__d('q3_config','No'));
+		}
+		if($atributes[5]==1){ //0 indexed list
+			$options['options']=explode(';',$config['options']);
 		}
 
 	echo $this->Form->input('Config.'.$i.'.value',array('label'=>$config['description'],'value'=>$config['value'],'id'=>'Config_'.$group_id.'_'.$i.'_value')+$options);
