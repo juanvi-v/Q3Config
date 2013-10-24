@@ -55,4 +55,25 @@ class ConfigsController extends Q3ConfigAppController {
 		}
 	}
 
+	/** @method admin_panic
+	 * enables the panic mode, to disable a basic site function for maintenance
+	 */
+	function admin_panic(){
+		$config_panic=$this->Config->find('first',array('fields'=>'Config.id','conditions'=>array('Config.config_key'=>'PANIC')));
+		$this->Config->id=$config_panic['Config']['id'];
+		$this->Config->saveField('value',1);
+		$this->Session->setFlash(__d('q3_config','Panic mode enabled'));
+		$this->redirect($this->referer());
+	}
+
+	/** @method admin_dont_panic
+	 * disables the panic mode, to enable a basic site function after maintenance
+	 */
+	function admin_dont_panic(){
+		$config_panic=$this->Config->find('first',array('fields'=>'Config.id','conditions'=>array('Config.config_key'=>'PANIC')));
+		$this->Config->id=$config_panic['Config']['id'];
+		$this->Config->saveField('value',0);
+		$this->Session->setFlash(__d('q3_config','Panic mode disabled'));
+		$this->redirect($this->referer());
+	}
 }

@@ -4,42 +4,53 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Q3Config\n"
-"POT-Creation-Date: 2013-07-01 19:21+0200\n"
-"PO-Revision-Date: 2013-07-01 19:32+0100\n"
+"POT-Creation-Date: 2013-10-24 14:58+0100\n"
+"PO-Revision-Date: 2013-10-24 14:59+0100\n"
 "Last-Translator: Juan Vicente Vercher <juanvi@artvisual.net>\n"
 "Language-Team: Juanvi <juanvi@artvisual.net>\n"
+"Language: Spanish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n== 1 ? 0 : 1;\n"
 "X-Generator: Poedit 1.5.4\n"
-"Language: Spanish\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;__d:2;__dn:2,3\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../../..\n"
 
-#: Controller/ConfigsController.php:45
+#: ../../../Controller/ConfigsController.php:49
 msgid "Items saved"
 msgstr "Elementos guardados"
 
-#: Controller/ConfigsController.php:49
+#: ../../../Controller/ConfigsController.php:53
 msgid "ERROR: no item has been saved"
 msgstr "ERROR: no se ha guardado ningún elemento"
 
-#: View/Configs/admin_index.ctp:2
+#: ../../../Controller/ConfigsController.php:65
+msgid "Panic mode enabled"
+msgstr "Modo pánico activado"
+
+#: ../../../Controller/ConfigsController.php:76
+msgid "Panic mode disabled"
+msgstr "Modo pánico desactivado"
+
+#: ../../../View/Configs/admin_index.ctp:2
 msgid "Configuration"
 msgstr "Configuración"
 
-#: View/Configs/admin_index.ctp:5
+#: ../../../View/Configs/admin_index.ctp:5
 msgid "No elements"
 msgstr "No hay elementos"
 
-#: View/Configs/admin_index.ctp:34
+#: ../../../View/Configs/admin_index.ctp:38
 msgid "Yes"
 msgstr "Sí"
 
-#: View/Configs/admin_index.ctp:34
+#: ../../../View/Configs/admin_index.ctp:38
 msgid "No"
 msgstr "No"
 
-#: View/Configs/admin_index.ctp:53
+#: ../../../View/Configs/admin_index.ctp:60
 msgid "Save"
 msgstr "Guardar"
