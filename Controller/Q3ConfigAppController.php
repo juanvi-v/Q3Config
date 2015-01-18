@@ -20,5 +20,17 @@
 App::uses('AppController', 'Controller');
 
 class Q3ConfigAppController extends AppController{
-
+	public function render($view = null, $layout = null) {
+            if (is_null($view)) {
+                $view = $this->action;
+            }
+            $viewPath = substr(get_class($this), 0, strlen(get_class($this)) - 10);
+            if (!file_exists(APP . 'View' . DS . $viewPath . DS . $view . '.ctp')) {
+                $this->plugin = 'Q3Config';
+            } else {
+                $this->viewPath = $viewPath;
+                $this->plugin='';
+            }
+            return parent::render($view, $layout);
+        }
 }
